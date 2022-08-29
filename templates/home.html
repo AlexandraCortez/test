@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="heatmapLGN"></div>
+    <div id="heatmapBCN"></div>
+    <div id="heatmapNY"></div>
+
+    <!-- Data variables -->
+    <script>
+    var error_data_url = "{{ url_for('get_error_data') }}";
+
+    </script>
+
+    <!-- Javascript codes -->
+    <script src="{{ url_for('static', filename='js/Main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Functions.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/heatmap.js') }}"></script>
+
+{% endblock content %}
